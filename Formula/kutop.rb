@@ -1,8 +1,8 @@
 class Kutop < Formula
   desc "btop-like Kubernetes TUI for pods, nodes, events, PVCs, alerts, and health"
   homepage "https://github.com/ken-jo/kutop"
-  url "https://github.com/ken-jo/kutop/releases/download/v0.5.2/kutop-homebrew-0.5.2.tar.gz"
-  sha256 "0a36f1defd5ef499a986caa944ac544b615ce31783011cd1729cf3488b7eae18"
+  url "https://github.com/ken-jo/kutop/releases/download/v0.5.3/kutop-homebrew-0.5.3.tar.gz"
+  sha256 "d634cd7bde48c3cfa40798de8c207a6be6aea0495b21996aa3d841d6846414f5"
   license "MIT"
 
   depends_on "python@3.12"
@@ -26,7 +26,7 @@ class Kutop < Formula
   end
 
   test do
-    assert_match "kutop 0.5.2", shell_output("#{bin}/kutop --version")
+    assert_match "kutop 0.5.3", shell_output("#{bin}/kutop --version")
     assert_match "self-test OK", shell_output("#{bin}/kutop --self-test")
   end
 end
